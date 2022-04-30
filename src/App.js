@@ -3,16 +3,14 @@ import "./App.css";
 
 import { Authenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
+import Notes from "./Notes";
 
 function App() {
   return (
     <Authenticator>
       {({ signOut, user }) => (
         <div className="App">
-          <p>
-            Hey {user.username}, welcome to the amplify test application, with
-            auth!
-          </p>
+          <Notes />
           <button onClick={signOut}>Sign out</button>
         </div>
       )}
